@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- JDBC Database connection setting -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hb_student_tracker</property>
+		<property name="hibernate.connection.username">hbstudent</property>
+		<property name="hibernate.connection.password">hbstudent</property>
+		
+		<!-- JDBC connection pool setting ... use build in test pool -->
+		<property name="hibernate.connection.pool_size">1</property>
+		
+		<!--  Select SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- Echo the SQL output to stdout -->
+		<property name="show_sql">true</property>
+		
+		<!-- Set current session context -->
+		<property name="hibernate.current_session_context_class">thread</property>
+		
+		
+	</session-factory>    
+</hibernate-configuration>
